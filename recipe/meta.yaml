@@ -1,5 +1,5 @@
 {% set name = "boogie" %}
-{% set version = "3.2.4" %}
+{% set version = "3.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/boogie-org/boogie/archive/v{{ version }}.tar.gz
-  sha256: f596677e32807c9391c2bea85e349732b15b6cbc7ac343c13056c58f4baccbdd
+  sha256: e5a58d4b0fee61e5ab6b5edf1cabd3a3c4ecc6a42f3c7d5425fd3ed485c5aea3
 
 build:
   noarch: generic
