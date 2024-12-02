@@ -1,17 +1,17 @@
-{% set name = "boogie" %}
-{% set version = "3.4.3" %}
+context:
+  version: 3.4.3
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: boogie
+  version: ${{ version }}
 
 source:
-  url: https://github.com/boogie-org/boogie/archive/v{{ version }}.tar.gz
+  url: https://github.com/boogie-org/boogie/archive/v${{ version }}.tar.gz
   sha256: e5a58d4b0fee61e5ab6b5edf1cabd3a3c4ecc6a42f3c7d5425fd3ed485c5aea3
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   host:
@@ -21,18 +21,18 @@ requirements:
   run:
     - dotnet
 
-test:
-  commands:
-    - 'boogie /help'
+tests:
+  - script:
+      - boogie /help
 
 about:
-  home: https://github.com/boogie-org/boogie
   license: MIT
   license_file:
     - LICENSE.txt
     - license-files/
   summary: Boogie is a modeling language, intended as a layer on which to build program verifiers for other languages.
-  dev_url: https://github.com/boogie-org/boogie
+  homepage: https://github.com/boogie-org/boogie
+  repository: https://github.com/boogie-org/boogie
 
 extra:
   recipe-maintainers:

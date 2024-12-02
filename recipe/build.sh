@@ -4,6 +4,7 @@ set -o xtrace -o nounset -o pipefail -o errexit
 
 mkdir -p ${PREFIX}/bin
 mkdir -p ${PREFIX}/libexec/${PKG_NAME}
+ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
 rm -rf global.json
@@ -17,6 +18,7 @@ tee ${PREFIX}/bin/boogie << EOF
 #!/bin/sh
 exec \${DOTNET_ROOT}/dotnet exec \${CONDA_PREFIX}/libexec/boogie/BoogieDriver.dll "\$@"
 EOF
+chmod +x ${PREFIX}/bin/boogie
 
 tee ${PREFIX}/bin/boogie.cmd << EOF
 call %DOTNET_ROOT%\dotnet exec %CONDA_PREFIX%\libexec\boogie\BoogieDriver.dll %*
