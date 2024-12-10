@@ -25,3 +25,5 @@ call %DOTNET_ROOT%\dotnet exec %CONDA_PREFIX%\libexec\boogie\BoogieDriver.dll %*
 EOF
 
 dotnet-project-licenses --input Source/BoogieDriver/BoogieDriver.csproj -t -d license-files
+
+rm ${PREFIX}/bin/dotnet
