@@ -7,7 +7,7 @@
 
 [project]
 name = "boogie-feedstock"
-version = "3.48.1"  # conda-smithy version used to generate this file
+version = "3.50.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/boogie-feedstock"
 authors = ["@conda-forge/boogie"]
 channels = ["conda-forge"]
