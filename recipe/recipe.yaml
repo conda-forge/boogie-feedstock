@@ -1,5 +1,5 @@
 context:
-  version: "3.5.7"
+  version: "3.5.8"
 
 package:
   name: boogie
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/boogie-org/boogie/archive/v${{ version }}.tar.gz
-  sha256: 425aa1f963882d5e117320baaf4ab4d355c753ce373305bac59327d393866c0b
+  sha256: 6c964a574a9109c564eb7253aef5c60928a50741905d0ee67ca1ffe4adcbdde6
 
 build:
   number: 0
